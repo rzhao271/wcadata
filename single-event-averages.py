@@ -6,7 +6,6 @@ import mariadb
 import json
 import sys
 import matplotlib.pyplot as plt
-from math import log10
 
 event = "pyram"
 timecap = 20
