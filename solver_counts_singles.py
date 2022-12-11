@@ -53,5 +53,5 @@ ax.grid(axis='x', alpha=0.3)
 
 ax.set_ylabel('Event')
 ax.set_xlabel('No. of competitors with at least one valid single')
-ax.set_title('Number of WCA competitors per event')
+ax.set_title('Number of WCA competitors with a single per event')
 plt.savefig(f"{img_dir}/solver-counts-singles.png", bbox_inches='tight')

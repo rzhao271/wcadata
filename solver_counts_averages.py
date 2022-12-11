@@ -1,4 +1,4 @@
-# Number of solvers with at least one valid single
+# Number of solvers with at least one valid average
 # Horizontal bar chart
 
 import mariadb
@@ -29,7 +29,7 @@ except mariadb.Error as e:
 
 cur = conn.cursor()
 
-# Get count of single times from given events
+# Get count of average times from given events
 event_counts = dict()
 cur.execute("SELECT eventId, COUNT(*) AS counts FROM RanksAverage GROUP BY eventId")
 
@@ -49,5 +49,5 @@ ax.grid(axis='x', alpha=0.3)
 
 ax.set_ylabel('Event')
 ax.set_xlabel('No. of competitors with at least one valid average')
-ax.set_title('Number of WCA competitors per event')
+ax.set_title('Number of WCA competitors with an average per event')
 plt.savefig(f"{img_dir}/solver-counts-averages.png", bbox_inches='tight')
